@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include imisc *.css
+recursive-include imisc *.csv
+recursive-include imisc *.html
+recursive-include imisc *.ico
+recursive-include imisc *.js
+recursive-include imisc *.json
+recursive-include imisc *.md
+recursive-include imisc *.png
+recursive-include imisc *.py
+recursive-include imisc *.svg
+recursive-include imisc *.txt
+recursive-exclude imisc *.pyc

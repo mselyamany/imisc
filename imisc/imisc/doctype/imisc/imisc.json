@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-30 02:44:41.588426",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "stock_transfer_with_margin_section",
+  "enable_stock_transfer_with_margin",
+  "default_margin",
+  "default_transfer_price_list",
+  "default_difference_account",
+  "accounting_misc_features_section",
+  "enable_sales_invoice_cost_center_propagation",
+  "enable_customer_balance_in_sales_invoice"
+ ],
+ "fields": [
+  {
+   "fieldname": "stock_transfer_with_margin_section",
+   "fieldtype": "Section Break",
+   "label": "Stock Transfer With Margin"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_stock_transfer_with_margin",
+   "fieldtype": "Check",
+   "label": "Enable Stock Transfer With Margin"
+  },
+  {
+   "default": "0",
+   "depends_on": "enable_stock_transfer_with_margin",
+   "fieldname": "default_margin",
+   "fieldtype": "Percent",
+   "label": "Default Margin",
+   "mandatory_depends_on": "enable_stock_transfer_with_margin"
+  },
+  {
+   "depends_on": "enable_stock_transfer_with_margin",
+   "fieldname": "default_transfer_price_list",
+   "fieldtype": "Link",
+   "label": "Default Transfer Price List",
+   "options": "Price List"
+  },
+  {
+   "depends_on": "enable_stock_transfer_with_margin",
+   "fieldname": "default_difference_account",
+   "fieldtype": "Link",
+   "label": "Default Difference Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "accounting_misc_features_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Misc Features"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_sales_invoice_cost_center_propagation",
+   "fieldtype": "Check",
+   "label": "Enable Sales Invoice Cost Center Propagation"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_customer_balance_in_sales_invoice",
+   "fieldtype": "Check",
+   "label": "Enable Customer Balance In Sales Invoice"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-12-17 13:00:27.797139",
+ "modified_by": "Administrator",
+ "module": "IMisc",
+ "name": "imisc",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
